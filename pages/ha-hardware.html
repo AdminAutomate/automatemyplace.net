@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Assistant Green vs Raspberry Pi 5: Which Should You Buy? (2026) — AutomateMyPlace</title>
+  <meta name="description" content="Home Assistant Green vs Raspberry Pi 5 — an honest comparison for 2026. Which hardware runs Home Assistant better? We break down cost, setup, reliability, and who each one is actually for.">
+  <link rel="canonical" href="https://automatemyplace.net/pages/ha-hardware.html">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="/" class="logo">AutomateMyPlace<span class="logo-dot">.</span></a>
+      <nav class="main-nav">
+        <a href="smart-switches.html">Switches</a>
+        <a href="zigbee-hub.html">Hubs</a>
+        <a href="ha-hardware.html">HA Hardware</a>
+        <a href="no-subscription-cameras.html">Cameras</a>
+        <a href="/#email-capture" class="nav-cta">Free Guide</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/">Home</a>
+        <span class="sep">›</span>
+        <span>HA Hardware</span>
+      </div>
+      <p class="eyebrow">Comparison Guide · Updated June 2026</p>
+      <h1>Home Assistant Green vs. Raspberry Pi 5: Which Should You Buy? (2026)</h1>
+      <p class="hero-sub">The two most-discussed Home Assistant hardware platforms. One is plug-and-play, the other is maximally flexible. We'll tell you exactly which one is right for your setup — and which common mistakes to avoid.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+
+      <h2>The Short Answer</h2>
+      <p><strong>Buy the Home Assistant Green</strong> if you want to spend your time automating your home rather than configuring hardware. Plug it in, go to homeassistant.local:8123, and you're running in under 2 minutes.</p>
+      <p><strong>Buy the Raspberry Pi 5</strong> if you want to run Frigate NVR for local camera AI, want maximum performance headroom, or already own a Pi and just need to flash a card.</p>
+
+      <!-- COMPARISON TABLE -->
+      <h2 style="margin-top:2.5rem;">Side-by-Side Comparison</h2>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Spec / Factor</th>
+            <th>HA Green</th>
+            <th>Raspberry Pi 5 (4GB)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Price (ready to run)</td>
+            <td class="winner">~$100</td>
+            <td>~$120–160 (Pi + case + SSD + PSU)</td>
+          </tr>
+          <tr>
+            <td>Setup time</td>
+            <td class="winner">Under 2 minutes. Plug in, done.</td>
+            <td>20–30 min. Flash image, configure boot, setup.</td>
+          </tr>
+          <tr>
+            <td>Processor</td>
+            <td>RK3566 quad-core Cortex-A55</td>
+            <td class="winner">BCM2712 quad-core Cortex-A76 (faster)</td>
+          </tr>
+          <tr>
+            <td>RAM</td>
+            <td>2 GB (fixed)</td>
+            <td class="winner">4 GB or 8 GB</td>
+          </tr>
+          <tr>
+            <td>Storage</td>
+            <td class="winner">32 GB eMMC (reliable, no SD failures)</td>
+            <td>NVMe SSD recommended (SD cards fail over time)</td>
+          </tr>
+          <tr>
+            <td>Officially supported</td>
+            <td class="winner">Yes — built by Nabu Casa</td>
+            <td>Community-supported (excellent, not official)</td>
+          </tr>
+          <tr>
+            <td>Built-in Zigbee/Thread</td>
+            <td>No — needs USB dongle</td>
+            <td>No — needs USB dongle</td>
+          </tr>
+          <tr>
+            <td>Frigate NVR performance</td>
+            <td>Limited (2 GB RAM, A55 CPU)</td>
+            <td class="winner">Better — handles 2–3 cameras</td>
+          </tr>
+          <tr>
+            <td>Idle power draw</td>
+            <td class="winner">~3–5W</td>
+            <td>~5–8W</td>
+          </tr>
+          <tr>
+            <td>Multi-use flexibility</td>
+            <td>HA only</td>
+            <td class="winner">Run other services alongside HA</td>
+          </tr>
+          <tr>
+            <td>Long-term reliability risk</td>
+            <td class="winner">eMMC — minimal risk</td>
+            <td>NVMe = reliable. SD card = fails eventually.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="product-cards">
+
+        <!-- HA Green -->
+        <div class="product-card">
+          <div class="product-card-header">
+            <div>
+              <span class="badge badge-best" style="margin-bottom:0.5rem; display:inline-block;">Best for Beginners · Plug and Play</span>
+              <div class="product-card-title">Home Assistant Green</div>
+            </div>
+            <div class="product-card-price">~$100</div>
+          </div>
+          <p>The Home Assistant Green is purpose-built by Nabu Casa specifically to run Home Assistant OS. Plug in an Ethernet cable and power, and it's running. No SD card to flash, no configuration, no OS selection. The onboarding UI is ready at homeassistant.local:8123 in under 2 minutes.</p>
+          <p>The eMMC storage is the real advantage over Raspberry Pi builds using SD cards. MicroSD cards fail under the constant read/write load of a 24/7 HA instance — it's when, not if. The Green's eMMC is designed for this workload and doesn't have this problem. For most home automation use cases (under 100 devices, no camera NVR), the 2 GB RAM and Cortex-A55 CPU are completely sufficient.</p>
+          <div class="product-card-pros-cons">
+            <div class="pros">
+              <h4>Pros</h4>
+              <ul>
+                <li>Plug-in and go — 2-minute setup</li>
+                <li>eMMC storage — no SD card failures</li>
+                <li>Officially supported and tested by Nabu Casa</li>
+                <li>Silent, low power (~3–5W)</li>
+                <li>Purchase directly funds HA development</li>
+              </ul>
+            </div>
+            <div class="cons">
+              <h4>Cons</h4>
+              <ul>
+                <li>2 GB RAM — limited for Frigate NVR or heavy add-ons</li>
+                <li>Slower CPU than Pi 5</li>
+                <li>HA-only device — can't repurpose</li>
+                <li>No built-in Zigbee (still need a USB dongle)</li>
+              </ul>
+            </div>
+          </div>
+          <div class="affiliate-box">
+            <span class="affiliate-box-text">Home Assistant Green — Official HA Hub</span>
+            <a href="https://amzn.to/HA_GREEN" class="btn btn-primary" rel="nofollow noopener" target="_blank">Check Price on Amazon →</a>
+          </div>
+        </div>
+
+        <!-- Raspberry Pi 5 -->
+        <div class="product-card">
+          <div class="product-card-header">
+            <div>
+              <span class="badge badge-advanced" style="margin-bottom:0.5rem; display:inline-block;">Most Powerful · Best for Frigate</span>
+              <div class="product-card-title">Raspberry Pi 5 (4GB or 8GB)</div>
+            </div>
+            <div class="product-card-price">~$60 board only</div>
+          </div>
+          <p>The Raspberry Pi 5 uses the BCM2712 (Cortex-A76) — meaningfully faster than the Green's Cortex-A55, with better handling of heavy add-ons like Whisper (local speech recognition) and Frigate (local AI camera NVR). The 8GB version can handle 2–3 Frigate camera streams at reasonable resolutions alongside a full Home Assistant instance.</p>
+          <p><strong>Storage warning:</strong> Do not use a microSD card as your primary storage. In 2026, this is mandatory advice. Use a NVMe HAT (Pimoroni or Waveshare make solid options) with an M.2 SSD. It eliminates the SD card reliability problem entirely. Budget $20–30 extra for this — it's not optional for a 24/7 HA install.</p>
+          <div class="product-card-pros-cons">
+            <div class="pros">
+              <h4>Pros</h4>
+              <ul>
+                <li>Faster CPU — better for Frigate, Whisper, heavy add-ons</li>
+                <li>4 or 8 GB RAM options</li>
+                <li>PCIe slot for NVMe SSD (with HAT)</li>
+                <li>Flexible — repurpose for other projects</li>
+                <li>If you already own one: free hardware</li>
+              </ul>
+            </div>
+            <div class="cons">
+              <h4>Cons</h4>
+              <ul>
+                <li>More setup required — 20–30 min minimum</li>
+                <li>SD card reliability risk if you skip NVMe</li>
+                <li>Higher power draw (~5–8W)</li>
+                <li>Not officially supported by Nabu Casa</li>
+                <li>Total BOM cost similar to Green when you add SSD, case, PSU</li>
+              </ul>
+            </div>
+          </div>
+          <div class="affiliate-box">
+            <span class="affiliate-box-text">Raspberry Pi 5 (4GB)</span>
+            <a href="https://amzn.to/RPI5_4GB" class="btn btn-primary" rel="nofollow noopener" target="_blank">Check Price on Amazon →</a>
+          </div>
+          <div class="affiliate-box" style="margin-top: 0.75rem;">
+            <span class="affiliate-box-text">Raspberry Pi 5 (8GB) — recommended for Frigate</span>
+            <a href="https://amzn.to/RPI5_8GB" class="btn btn-primary" rel="nofollow noopener" target="_blank">Check Price on Amazon →</a>
+          </div>
+          <div class="affiliate-box" style="margin-top: 0.75rem;">
+            <span class="affiliate-box-text">Pimoroni NVMe Base for Raspberry Pi 5 (recommended storage upgrade)</span>
+            <a href="https://amzn.to/RPI5_NVME" class="btn btn-primary" rel="nofollow noopener" target="_blank">Check Price on Amazon →</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- DECISION GUIDE -->
+      <h2 style="margin-top:3rem;">The Simple Decision Guide</h2>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 1.5rem 0;">
+        <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 10px; padding: 1.5rem;">
+          <h3 style="color: #15803d; margin-bottom: 1rem;">✓ Buy the Home Assistant Green if:</h3>
+          <ul style="list-style: none;">
+            <li style="padding:0.4rem 0; color: #166534; font-size:0.9rem;">You just want home automation to work</li>
+            <li style="padding:0.4rem 0; color: #166534; font-size:0.9rem;">You don't plan to run Frigate camera AI</li>
+            <li style="padding:0.4rem 0; color: #166534; font-size:0.9rem;">You want zero setup friction</li>
+            <li style="padding:0.4rem 0; color: #166534; font-size:0.9rem;">You're new to Home Assistant</li>
+            <li style="padding:0.4rem 0; color: #166534; font-size:0.9rem;">You have under ~100 devices</li>
+          </ul>
+        </div>
+        <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 10px; padding: 1.5rem;">
+          <h3 style="color: #1d4ed8; margin-bottom: 1rem;">✓ Buy the Raspberry Pi 5 if:</h3>
+          <ul style="list-style: none;">
+            <li style="padding:0.4rem 0; color: #1e40af; font-size:0.9rem;">You already own one (just flash it)</li>
+            <li style="padding:0.4rem 0; color: #1e40af; font-size:0.9rem;">You want to run Frigate with multiple cameras</li>
+            <li style="padding:0.4rem 0; color: #1e40af; font-size:0.9rem;">You enjoy DIY configuration</li>
+            <li style="padding:0.4rem 0; color: #1e40af; font-size:0.9rem;">You want maximum performance headroom</li>
+            <li style="padding:0.4rem 0; color: #1e40af; font-size:0.9rem;">You want to repurpose the hardware later</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2 style="margin-top:3rem;">What About the Dongle? (Both Need One)</h2>
+      <p>Neither the Green nor the Raspberry Pi 5 have a built-in Zigbee radio. Both need a USB Zigbee coordinator. Our recommendation is the same for both: the <a href="zigbee-hub.html">Sonoff ZBDongle-P-E ($20)</a> or the official <a href="zigbee-hub.html">Home Assistant Connect ZBT-2 ($30)</a>. Always use a USB extension cable to position the dongle away from USB 3.0 interference.</p>
+
+      <!-- EMAIL CAPTURE -->
+      <div style="background: #1a1f2e; border-radius: 10px; padding: 2rem; margin-top: 3rem; display: flex; gap: 2rem; align-items: center; flex-wrap: wrap;">
+        <div style="flex:1; min-width: 220px;">
+          <p style="color: #e2e8f0; font-weight: 700; font-size: 1.05rem; margin-bottom: 0.5rem;">Get the complete starter hardware list</p>
+          <p style="color: #94a3b8; font-size: 0.9rem;">Hub + coordinator + first sensors — the exact parts list for a working local smart home under $150.</p>
+        </div>
+        <form action="CONVERTKIT_FORM_ACTION" method="POST" style="display:flex; gap: 0.75rem; flex-wrap: wrap;">
+          <input type="email" name="email_address" placeholder="your@email.com" required style="padding:0.7rem 1rem; border-radius:8px; border:1px solid #475569; background:#0f172a; color:#fff; font-size:0.95rem; min-width:220px;">
+          <button type="submit" class="btn btn-primary">Get the Guide</button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <a href="/" class="logo">AutomateMyPlace<span class="logo-dot">.</span></a>
+        <p>Honest home automation guides. No subscriptions. No fluff.</p>
+      </div>
+      <nav class="footer-nav">
+        <a href="smart-switches.html">Smart Switches</a>
+        <a href="zigbee-hub.html">Zigbee Hubs</a>
+        <a href="ha-hardware.html">HA Hardware</a>
+        <a href="no-subscription-cameras.html">Cameras</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+    <div class="container footer-legal">
+      <p>AutomateMyPlace.com is a participant in the Amazon Services LLC Associates Program. We earn a commission on qualifying purchases at no extra cost to you. <a href="about.html#affiliate">Affiliate Disclosure</a>.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
